@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>11S Shop Dashboard</title>
+  <link rel="icon" href="/assets/favicon.ico">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="/assets/archivo.css">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="/assets/logo.png" alt="11S Shop" />
+      <h1>Dashboard</h1>
+    </div>
+    <div class="actions">
+      <button id="uploadBtn" class="btn btn-outline">Upload data</button>
+      <div class="export-group">
+        <button id="exportCsv" class="btn">Export CSV</button>
+        <button id="exportXlsx" class="btn">Export XLSX</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="filters" id="filters"></section>
+
+  <main class="tiles" id="tiles"></main>
+
+  <footer class="footer">
+    <span>&copy; <span id="year"></span> 11S Shop – Prototype</span>
+    <a href="https://elfstedenhal.frl/11sshop/" target="_blank" rel="noopener">Stijlreferentie</a>
+  </footer>
+
+  <script type="module" src="/components/utils.js"></script>
+  <script type="module" src="/components/api.js"></script>
+  <script type="module" src="/components/modal.js"></script>
+  <script type="module" src="/components/tiles.js"></script>
+  <script type="module" src="/uploader.js"></script>
+  <script type="module" src="/filters.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

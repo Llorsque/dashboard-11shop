@@ -1,0 +1,9 @@
+{
+  "name": "11S Shop Dashboard",
+  "short_name": "11S Dash",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#212945",
+  "theme_color": "#52E8E8",
+  "icons": []
+}
