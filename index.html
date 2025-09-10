@@ -11,13 +11,16 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <header class="topbar">
+  <header class="topbar glass">
     <div class="brand">
-      <img src="./assets/logo.png" alt="11S Shop" />
-      <h1>Dashboard</h1>
+      <img class="logo" src="./assets/logo.png" alt="11S Shop" />
+      <div class="titles">
+        <h1>11S Shop</h1>
+        <span class="subtitle">Operations & Performance</span>
+      </div>
     </div>
     <div class="actions">
-      <button id="uploadBtn" class="btn btn-outline">Upload data</button>
+      <button id="uploadBtn" class="btn ghost">Upload data</button>
       <div class="export-group">
         <button id="exportCsv" class="btn">Export CSV</button>
         <button id="exportXlsx" class="btn">Export XLSX</button>
@@ -25,11 +28,22 @@
     </div>
   </header>
 
-  <section class="filters" id="filters"></section>
+  <section class="toolbar">
+    <div class="filters" id="filters"></div>
+    <div class="filter-controls">
+      <label class="switch">
+        <input type="checkbox" id="filtersToggle" checked>
+        <span class="slider"></span>
+      </label>
+      <span class="switch-label">Filters actief</span>
+      <button id="resetFilters" class="btn tiny">Reset</button>
+    </div>
+  </section>
+
   <main class="tiles" id="tiles"></main>
 
   <footer class="footer">
-    <span>&copy; <span id="year"></span> 11S Shop – Prototype (Static Mode)</span>
+    <span>&copy; <span id="year"></span> 11S Shop — Prototype Dashboard</span>
     <a href="https://elfstedenhal.frl/11sshop/" target="_blank" rel="noopener">Stijlreferentie</a>
   </footer>
 
@@ -39,8 +53,6 @@
   <script type="module" src="./components/tiles.js"></script>
   <script type="module" src="./uploader.js"></script>
   <script type="module" src="./filters.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>

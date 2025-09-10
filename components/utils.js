@@ -1,5 +1,5 @@
 
-export function formatMoney(n){ return new Intl.NumberFormat('nl-NL',{style:'currency', currency:'EUR'}).format(n||0) }
+export function formatMoney(n){ return new Intl.NumberFormat('nl-NL',{style:'currency', currency:'EUR', maximumFractionDigits:0}).format(n||0) }
 export function formatPct(x){ return (x*100).toFixed(1)+'%' }
 export function $(sel){ return document.querySelector(sel) }
 export function el(tag, attrs={}, children=[]){

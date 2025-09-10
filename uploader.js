@@ -9,11 +9,10 @@ $('#uploadBtn').addEventListener('click', async ()=>{
   if (!type) return;
   const input = document.createElement('input');
   input.type = 'file';
-  input.accept = '.csv,.xlsx,.xls,.txt';
+  input.accept = '.csv';
   input.onchange = async (e)=>{
     const file = e.target.files[0];
     if (!file) return;
-    if (!file.name.toLowerCase().endsWith('.csv')){ alert('Static Mode ondersteunt alleen CSV (geen XLSX)'); return; }
     const text = await file.text();
     const rows = parseTextToRows(text);
     overrideDataset(type, rows);

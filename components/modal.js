@@ -1,9 +1,7 @@
 
 import { $, el } from './utils.js';
-
 const backdrop = el('div', {class:'modal-backdrop', id:'modalBackdrop'});
 document.body.appendChild(backdrop);
-
 export function showModal(title, sections){
   backdrop.innerHTML = '';
   const modal = el('div', {class:'modal'});
